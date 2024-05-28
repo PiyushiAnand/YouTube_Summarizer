@@ -29,7 +29,7 @@ Press CTRL+C to quit
  - Debugger PIN: 331-483-947
 http://127.0.0.1:5000 indicates local server or host machine.
 2. Run the following `curl` command in another terminal to test the API:
-"http://127.0.0.1:5000/api/summarize?youtube_url=YOUTUBE_URL" in another terminal.
+ - curl "http://127.0.0.1:5000/api/summarize?youtube_url=YOUTUBE_URL" in another terminal.
 The summarization process might take up a few minutes if the video is very long.
 
 ## Building Chrome Extension
