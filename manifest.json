@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Summarizer",
+    "version": "1.0",
+    "permissions": ["tabs", "activeTab", "storage"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+   "content_scripts":[
+        {
+        "matches":["https://www.youtube.com/watch?v=*"],
+        "js": ["contentScript.js"]
+        }
+    ]
+  }
+  
