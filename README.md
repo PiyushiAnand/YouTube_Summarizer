@@ -31,3 +31,28 @@ http://127.0.0.1:5000 indicates local server or host machine.
 2. Run the following `curl` command in another terminal to test the API:
 "http://127.0.0.1:5000/api/summarize?youtube_url=YOUTUBE_URL" in another terminal.
 The summarization process might take up a few minutes if the video is very long.
+
+## Building Chrome Extension
+
+1. **File Names:**
+   - Except for `manifest.json`, the names of other files can be anything.
+
+2. **Roles of Each File:**
+
+   - **manifest.json:** 
+     - This file tells Chrome the role of each file used in the extension.
+
+   - **popup.html:**
+     - This file provides the basic UI of the extension.
+
+   - **popup.css:**
+     - This file handles the aesthetics and layout of the extension.
+
+   - **popup.js:**
+     - This file receives the signal from the button click in the popup and sends this signal to `contentScript.js` via `background.js`.
+
+   - **background.js:**
+     - This file acts as a bridge, communicating between `contentScript.js` and `popup.js`.
+
+   - **contentScript.js:**
+     - This file receives the signal from `background.js`, calls the API for generating the summary, and sends the generated summary back to `popup.js` via `background.js`.
