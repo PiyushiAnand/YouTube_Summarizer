@@ -21,13 +21,13 @@ The backend API is built using Flask. This API extracts the YouTube video URL, f
 ## Verification of API
 We can use curl to verify the api.The steps are 
 1. Run the server and the following lines will show up :
-   WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
- * Running on http://127.0.0.1:5000
+   - WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ - Running on http://127.0.0.1:5000
 Press CTRL+C to quit
- * Restarting with stat
- * Debugger is active!
- * Debugger PIN: 331-483-947
+ - Restarting with stat
+ - Debugger is active!
+ - Debugger PIN: 331-483-947
 http://127.0.0.1:5000 indicates local server or host machine.
 2. Run the following `curl` command in another terminal to test the API:
-"http://127.0.0.1:5000/api/summarize?youtube_url=https://www.youtube.com/watch?v=dQw4w9WgXcQ"(url is just an example we can put any url of our choice) in another terminal.
+"http://127.0.0.1:5000/api/summarize?youtube_url=YOUTUBE_URL" in another terminal.
 The summarization process might take up a few minutes if the video is very long.
